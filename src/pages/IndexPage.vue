@@ -1,11 +1,11 @@
 <template>
   <q-layout view="hHh lpR fFf">
     <!-- HEADER -->
-    <q-header elevated class="bg-white text-black">
+    <q-header elevated class="bg-white text-black shadow-sm">
       <q-toolbar>
-        <q-toolbar-title class="text-weight-bold text-h5"
-          >Fumbo</q-toolbar-title
-        >
+        <q-toolbar-title class="text-weight-bold text-h5">
+          Fumbo
+        </q-toolbar-title>
         <q-space />
         <q-input
           dense
@@ -23,16 +23,22 @@
           flat
           label="Ouvrages"
           class="hover-underline-animation"
-          to="auteur"
+          to="/ouvrage"
         />
-        <q-btn flat label="Récits" class="hover-underline-animation" />
+        <q-btn
+          flat
+          label="Ecrire"
+          class="hover-underline-animation"
+          to="/Ecrire"
+        />
         <q-btn flat label="Romans" class="hover-underline-animation" />
         <q-btn
           rounded
           unelevated
           color="black"
-          label="Raconter"
+          label="Se connecter"
           class="q-ml-md text-white hover-grow"
+          to="/inscription"
         />
       </q-toolbar>
     </q-header>
@@ -85,10 +91,16 @@
     <!-- Section raconter une histoire -->
     <div class="story-section">
       <img :src="backgroundImage" alt="Illustration" class="background-image" />
-      <button class="text">Raconter une histoire</button>
+      <q-btn
+        class="hover-grow"
+        label="Raconter une histoire"
+        bg-color="black"
+        color="black"
+        unelevated
+      />
     </div>
 
-    <!--Section pour le temoignage-->
+    <!--Section pour le témoignage-->
     <div class="testimonial">
       <!-- Image de profil -->
       <img :src="userImage" class="profile-img" width="300px" />
