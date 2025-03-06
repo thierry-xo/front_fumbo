@@ -107,7 +107,7 @@ export default {
 <style scoped>
 /* Style général pour la page */
 .register-page {
-  background: linear-gradient(135deg, #2575fc, #cbcbcb);
+  background: linear-gradient(135deg, #cbcbcb, #2575fc);
   height: 100vh;
   display: flex;
   align-items: center;

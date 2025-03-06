@@ -9,12 +9,12 @@ const routes = [
         component: () => import("src/components/RegisterCount.vue"),
       },
       {
-        path: "/categorie",
-        component: () => import("pages/CategoriePage.vue"),
+        path: "/ouvrage",
+        component: () => import("pages/HistoirePage.vue"),
       },
       { path: "/histoire", component: () => import("pages/HistoirePage.vue") },
       {
-        path: "/ouvrage",
+        path: "/publier",
         component: () => import("src/pages/OuvragePage.vue"),
       },
       {
@@ -22,6 +22,14 @@ const routes = [
         component: () => import("pages/LogginPage.vue"),
       },
       { path: "/Ecrire", component: () => import("src/pages/EcrirePage.vue") },
+      {
+        path: "/Enregistrer",
+        component: () => import("src/pages/InscriptionPage.vue"),
+      },
+      {
+        path: "/about",
+        component: () => import("src/pages/AboutPage.vue"),
+      },
     ],
   },
 

@@ -21,29 +21,56 @@
         </q-input>
         <q-btn
           flat
+          label="A propos"
+          class="hover-underline-animation"
+          to="/about"
+        />
+        <q-btn
+          flat
           label="Ouvrages"
           class="hover-underline-animation"
           to="/ouvrage"
         />
         <q-btn
           flat
+          label="Publier"
+          class="hover-underline-animation"
+          to="/Enregistrer"
+        />
+        <q-btn
+          flat
           label="Ecrire"
           class="hover-underline-animation"
-          to="/Ecrire"
+          to="/Enregistrer"
         />
-        <q-btn flat label="Romans" class="hover-underline-animation" />
+
         <q-btn
           rounded
           unelevated
           color="black"
-          label="Se connecter"
+          label="S'inscrire'"
           class="q-ml-md text-white hover-grow"
-          to="/inscription"
+          to="/Enregistrer"
         />
       </q-toolbar>
     </q-header>
+    <q-separator spaced />
 
     <!-- CONTENU PRINCIPAL -->
+
+    <div class="banner-container">
+      <q-img src="/img/book3.jpg" class="banner-image">
+        <div class="banner-overlay">
+          <div class="text-h4 text-white text-center text-weight-bold">
+            Bienvenue sur Fumbo
+          </div>
+          <div class="text-subtitle1 text-white text-center q-mt-md">
+            Là où les histoires prennent vie et trouvent leur public.
+          </div>
+        </div>
+      </q-img>
+    </div>
+    <q-separator spaced />
     <div class="carousel">
       <!-- Image principale -->
       <div class="carousel-background-image">
@@ -59,7 +86,7 @@
       <button class="nav-button left" @click="prevSlide">&#10094;</button>
       <button class="nav-button right" @click="nextSlide">&#10095;</button>
     </div>
-
+    <q-separator spaced />
     <!-- Section Écouter des Histoires -->
     <div class="q-mt-xl section-container animate__animated animate__fadeInUp">
       <h4 class="text-center text-weight-bold q-mb-lg">
@@ -87,19 +114,18 @@
         </q-card>
       </div>
     </div>
-
+    <q-separator spaced />
     <!-- Section raconter une histoire -->
     <div class="story-section">
       <img :src="backgroundImage" alt="Illustration" class="background-image" />
       <q-btn
         class="hover-grow"
         label="Raconter une histoire"
-        bg-color="black"
-        color="black"
+        color="purple-14"
         unelevated
       />
     </div>
-
+    <q-separator spaced />
     <!--Section pour le témoignage-->
     <div class="testimonial">
       <!-- Image de profil -->
@@ -203,12 +229,12 @@ const stories = ref([
 // Liste des diapositives
 const slides = ref([
   {
-    image: "/img/book5.jpg",
+    image: "/img/book6.jpg",
     title: "La révolution du numérique de notre ère",
     author: "Thierry Nirere",
   },
   {
-    image: "/img/book6.jpg",
+    image: "/img/book5.jpg",
     title: "L’intelligence artificielle et son impact",
     author: "Sophie Durant",
   },
@@ -245,6 +271,26 @@ const userImage = new URL("/img/icone.jpg", import.meta.url).href;
 </script>
 
 <style scoped>
+.banner-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.banner-image {
+  height: 100%;
+  object-fit: cover;
+}
+.banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+}
+
 /* Importer Animate.css */
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
 

@@ -161,7 +161,7 @@ export default {
     };
 
     const redirectToRegister = () => {
-      router.push("/inscription");
+      router.push("/enregistrer");
     };
 
     return {
