@@ -13,7 +13,7 @@
         <q-form @submit="register">
           <q-input
             v-model="form.nom"
-            label="Nom"
+            label="Username"
             outlined
             dense
             class="q-mb-md"
@@ -42,10 +42,20 @@
             dense
             class="q-mb-md"
           />
-          <q-input
+          <!-- <q-input
             v-model="form.confirmPassword"
             type="password"
             label="Confirmer le mot de passe"
+            outlined
+            dense
+            class="q-mb-md"
+          /> -->
+
+          <!-- Champ biographie -->
+          <q-input
+            v-model="form.prenom"
+            type="texte"
+            label="Biographie"
             outlined
             dense
             class="q-mb-md"
